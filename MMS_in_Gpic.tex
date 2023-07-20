@@ -199,7 +199,7 @@
 
 
 \begin{abstract}
-
+Manufactured solution and generalized vortex problems were used to investigate the accuracy and convergence rate of generalized particle in cell (GPIC) method in two-dimensional explicit solving. The recommendations were then proposed on the relationship between mesh size of computational grid and  that of solid mesh.
 
 \end{abstract}
 
@@ -215,7 +215,7 @@
 %\end{highlights}
 
 \begin{keyword}
-Genetic algorithm; Dynamic Relaxation method; truncated regular polyhedron; tensegrity tower; tensegrity arch
+Generalized particle in cell; Method of manufactured solution; generalized vortex problem; convergence rate
 \end{keyword}
 
 \end{frontmatter}
@@ -225,22 +225,11 @@ Genetic algorithm; Dynamic Relaxation method; truncated regular polyhedron; tens
 %% main text
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-
-\citep{Coombs:CMAME2020a} suggest
-
-\cite{Murakami2001} proposed
-
 \label{sec:1}
-\begin{figure}[h!]
-	\centering 
-	\includegraphics[width=1.0\textwidth]{vibratingbeamGPIC.pdf}
-	\caption{Vibration of a compliant beam: FEM versus GPIC-mesh sensitive test}
-	\label{Fig1}
-\end{figure}
+The material point method (MPM) \citep{Sulsky:CMAME1994a} 
+community, generalized particle method (GPIC) developed by \citet{nguyen2020generalized} currently shows several good points such as: i) Dirichlet and Neumann boundary conditions are input in the way of finite element method; ii) 
 
-Important note (29/06/2023) if both coarse meshes are used for FE and background, the results seem good. So now, we have to got the analytical explanation for this results. 
 
-The GPIC method has two meshes: background and solid FE ones. This investigation focuses on the ratio between two rectangular mesh.
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
@@ -256,6 +245,22 @@ The GPIC method has two meshes: background and solid FE ones. This investigation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Dynamic relaxation methods for form-finding problems of tensegrity structures}
 \label{sec:2}
+
+\citep{Coombs:CMAME2020a} suggest
+
+\cite{Murakami2001} proposed
+
+\begin{figure}[h!]
+	\centering 
+	\includegraphics[width=1.0\textwidth]{MMS2D_Error.pdf}
+	\caption{Vibration of a compliant beam: FEM versus GPIC-mesh sensitive test}
+	\label{Fig1}
+\end{figure}
+
+Important note (29/06/2023) if both coarse meshes are used for FE and background, the results seem good. So now, we have to got the analytical explanation for this results. 
+
+The GPIC method has two meshes: background and solid FE ones. This investigation focuses on the ratio between two rectangular mesh.
+
 
 %============================================================================================================
 \subsection{Equilibrium equations}\label{subsec:2:1}
@@ -299,7 +304,8 @@ The GPIC method has two meshes: background and solid FE ones. This investigation
 %%\bibliography{C：¥Users¥bqhie¥Dropbox¥BQH Work¥Research Project¥Project of MPM¥JabrefLibrary¥mpm}
 %%\bibliography{./mpm}
 %%\bibliography{./mpm-only}
-\bibliography{mpm}
+%\bibliography{mpm}
+\bibliography{mpm-only}
 %% else use the following coding to input the bibitems directly in the
 %% TeX file.
 
